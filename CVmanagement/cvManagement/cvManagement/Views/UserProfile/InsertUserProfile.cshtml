@@ -1,0 +1,97 @@
+﻿@model cvManagement.Models.UserProfile
+
+@{
+    ViewBag.Title = "InsertUserProfile";
+}
+<style>
+    .container {
+        max-width: 960px;
+    }
+
+    .lh-condensed {
+        line-height: 1.25;
+    }
+</style>
+<script>
+    (function () {
+        'use strict'
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation')
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    })()
+</script>
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="col-12 d-flex justify-content-between" style="padding:0px">
+    <h2>Create profile</h2>
+    @Html.ActionLink("Back To List", "ListUserProfile", null, new { @class = "btn btn-secondary w-10 btn btn-primary btn-lg" })
+</div>
+<hr class="my-4">
+@using (Html.BeginForm("InsertUserProfile", "UserProfile", null, FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+{
+    <div class="row g-3">
+        <div class="col-12">
+            <label for="username" class="form-label">Full name</label>
+            <div class="input-group needs-validation">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", required = "required" })
+                <div class="invalid-feedback">
+                    Please enter the name.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="country" class="form-label">Position</label>
+            @Html.DropDownListFor(model => model.PositionId, new SelectList(Model.listPosition, "Id", "Name"), new { @class = "form-control" })
+        </div>
+
+        <div class="col-md-4">
+            <label for="state" class="form-label">Source</label>
+            @Html.DropDownListFor(model => model.SourceId, new SelectList(Model.listSource, "Id", "Name"), new { @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            <label for="zip" class="form-label">Apply date</label>
+            @Html.EditorFor(model => model.ApplyDate, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+            <div class="invalid-feedback">
+                Please enter the date.
+            </div>
+        </div>
+        <div class="col-12">
+            <label for="username" class="form-label">CV link</label>
+            <div class="input-group">
+                @Html.EditorFor(model => model.CvLink, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                <div class="invalid-feedback">
+                    Please enter the cv link.
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <label for="address" class="form-label">Email status</label>
+            @Html.DropDownListFor(model => model.Status, new List<SelectListItem>
+            {
+                new SelectListItem{ Text="Đã nhận CV", Value = "1" },
+                new SelectListItem{ Text="Đã gửi thư cảm ơn", Value = "2" },
+                new SelectListItem{ Text="Nhận việc", Value = "3" },
+            }, new { @class = "form-control" })
+        </div>
+    </div>
+    <label for="address" class="form-label">Note</label>
+    @Html.TextAreaFor(model => model.Note, new { @class = "form-control", @cols = 3, @rows = 6, required = "required" })
+    <div class="invalid-feedback">
+        Please enter the note.
+    </div>
+    <!--Buttons-->
+    <hr class="my-4">
+    <div class="col-12" style="padding:0px">
+        <input type="submit" value="Submit" class="w-10 btn btn-primary btn-lg" />
+    </div>
+}

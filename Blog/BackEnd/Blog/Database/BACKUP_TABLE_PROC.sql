@@ -1,0 +1,111 @@
+﻿USE BLOG
+GO
+
+CREATE TABLE BLOG (
+	ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	IMG	VARCHAR(MAX),
+	TIMES DATE,
+	TITLE NVARCHAR(MAX),
+	CONTENT NVARCHAR(MAX)
+) 
+GO
+
+CREATE PROC PROC_CRUD_BLOG
+	@SELECT INT = NULL,
+
+	@ID INT = NULL,
+	@IMG VARCHAR(MAX) = NULL,
+	@TIMES DATE = NULL ,
+	@TITLE NVARCHAR(MAX) = NULL,
+	@CONTENT NVARCHAR(MAX) = NULL
+AS
+BEGIN
+    IF (@SELECT = 1) -- SELECE ALL DATA
+	BEGIN
+	    SELECT * 
+		FROM BLOG
+	END
+
+	IF (@SELECT = 2) -- INSERT DATA INTO DATABASE
+	BEGIN
+	    INSERT INTO BLOG 
+		(
+			IMG,
+			TIMES ,
+			TITLE,
+			CONTENT
+		) 
+		VALUES 
+		(
+			@IMG ,
+			GETDATE(), -- Đoạn này em để nó nhận trưc tiếp ngày tháng hiện tại của hệ thống
+						-- insert không cần nhập date time nữa
+			@TITLE ,
+			@CONTENT 
+		)
+
+		IF @@ROWCOUNT > 0 SELECT 'INSERT thành công'
+		ELSE SELECT 'không thành công'
+	END
+
+	IF (@SELECT = 3) -- UPDATE DATA BY ID
+	BEGIN
+	   UPDATE BLOG  
+	   SET
+		IMG = @IMG,
+		TIMES = @TIMES ,
+		TITLE = @TITLE,
+		CONTENT = @CONTENT
+	   WHERE ID = @ID
+
+	   IF @@ROWCOUNT > 0 SELECT 'UPDATE thành công'
+		ELSE SELECT 'không thành công'
+	END
+
+	IF (@SELECT = 4) -- DELETE DATA BY ID
+	BEGIN
+	    DELETE FROM BLOG
+		WHERE ID = @ID
+	END
+
+	IF (@SELECT = 5) --  SELECT DATA BY ID
+	BEGIN
+	    SELECT *
+		FROM BLOG
+		WHERE ID = @ID
+
+		IF @@ROWCOUNT > 0 SELECT 'SELECT thành công'
+		ELSE SELECT 'không thành công'
+	END
+
+	IF @SELECT = 6 -- SELECT DATA BY TITLE
+	BEGIN
+	    SELECT * 
+		FROM BLOG
+		WHERE TITLE LIKE '%' + @TITLE + '%'
+
+		IF @@ROWCOUNT > 0 SELECT 'SELECT thành công'
+		ELSE SELECT 'không thành công'
+	END
+
+	IF @SELECT = 7 -- SELECT DATA BY CONTENT
+	BEGIN
+	    SELECT * 
+		FROM BLOG 
+		WHERE CONTENT LIKE '%' + @CONTENT + '%'
+
+		IF @@ROWCOUNT > 0 SELECT 'SELECT thành công'
+		ELSE SELECT 'không thành công'
+	END
+
+	IF @SELECT = 8 -- SELECT DATA BY TIME
+	BEGIN
+	    SELECT * 
+		FROM BLOG 
+		WHERE TIMES = @TIMES 
+
+		IF @@ROWCOUNT > 0 SELECT 'SELECT thành công'
+		ELSE SELECT 'không thành công'
+	END
+END
+GO

@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\bin\Debug\Bai4Array.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\bin\Debug\Bai4Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\bin\Debug\Bai4Array.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\obj\Debug\Bai4Array.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\obj\Debug\Bai4Array.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\obj\Debug\Bai4Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai4Array\Bai4Array\obj\Debug\Bai4Array.pdb

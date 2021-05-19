@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\App_Common",
+    "\\App_Common\\DataAccess",
+    "\\App_Data",
+    "\\Controllers",
+    "\\Models",
+    "\\Views",
+    "\\Views\\Blog"
+  ],
+  "SelectedNode": "\\BlogManager.csproj",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--Link JQUERY BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+
+    <!--CSS style-->
+    <style>
+        label {
+            margin-top: 15px;
+        }
+        /*body*/
+        body {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /*navbar*/
+        nav {
+            height: 50px;
+        }
+
+        .form-control-dark {
+            background-color: rgb(255, 255, 255, 0.1);
+        }
+
+        /*logo*/
+        img {
+            height: 40px;
+            width: 100px;
+        }
+
+        /*sidebar*/
+        li strong {
+            color: #333;
+        }
+
+        .sidebar {
+            height: 100vh;
+        }
+    </style>
+    <script>
+        <script>
+            (function () {
+                'use strict'
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation')
+                Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+            }, false)
+        })()
+    </script>
+    </script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 row">
+        <div class="container col-sm-3 col-md-2">
+            <img class="mx-auto" src="~/Photos/logo.png" />
+        </div>
+        <!--search button-->
+        <input class="form-control form-control-dark border border-dark rounded-0 ml-2"
+               type="text"
+               placeholder="Search"
+               style="height: 50px" />
+        <!--sign out button-->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                @{
+                    if (Session["account"] != null)
+                    {
+                        <a href="@Url.Action("Logout", "Home")" class="nav-link">
+                            <span>
+                                <strong style="color: white">Sign out</strong>
+                            </span>
+                        </a>
+                    }
+                }
+            </li>
+        </ul>
+    </nav>
+    <!--main-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--sidebar-->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        @{
+                            if (Session["account"] != null)
+                            {
+                                <!--Profile-->
+                                <li class="nav-item">
+                                    <a href="@Url.Action("ListUserProfile", "UserProfile")" class="nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M2.75 2A1.75 1.75 0 001 3.75v3.5C1 8.216 1.784 9 2.75 9h18.5A1.75 1.75 0 0023 7.25v-3.5A1.75 1.75 0 0021.25 2H2.75zm18.5 1.5H2.75a.25.25 0 00-.25.25v3.5c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-3.5a.25.25 0 00-.25-.25z"></path><path d="M2.75 10a.75.75 0 01.75.75v9.5c0 .138.112.25.25.25h16.5a.25.25 0 00.25-.25v-9.5a.75.75 0 011.5 0v9.5A1.75 1.75 0 0120.25 22H3.75A1.75 1.75 0 012 20.25v-9.5a.75.75 0 01.75-.75z"></path><path d="M9.75 11.5a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"></path></svg>
+                                        <span>
+                                            <strong>Profile</strong>
+                                        </span>
+                                    </a>
+                                </li>
+                                <!--Account-->
+                                <li class="nav-item">
+                                    <a href="@Url.Action("ShowAllAccounts", "Account")" class="nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M3.5 8a5.5 5.5 0 118.596 4.547 9.005 9.005 0 015.9 8.18.75.75 0 01-1.5.045 7.5 7.5 0 00-14.993 0 .75.75 0 01-1.499-.044 9.005 9.005 0 015.9-8.181A5.494 5.494 0 013.5 8zM9 4a4 4 0 100 8 4 4 0 000-8z"></path><path d="M17.29 8c-.148 0-.292.01-.434.03a.75.75 0 11-.212-1.484 4.53 4.53 0 013.38 8.097 6.69 6.69 0 013.956 6.107.75.75 0 01-1.5 0 5.193 5.193 0 00-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0017.29 8z"></path></svg>
+                                        <span>
+                                            <strong>Account</strong>
+                                        </span>
+                                    </a>
+                                </li>
+                                <!--Email-->
+                                <li class="nav-item">
+                                    <a href="@Url.Action("ShowAllTemplates", "EmailTemplate")" class="nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M1.75 3A1.75 1.75 0 000 4.75v14c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0024 18.75v-14A1.75 1.75 0 0022.25 3H1.75zM1.5 4.75a.25.25 0 01.25-.25h20.5a.25.25 0 01.25.25v.852l-10.36 7a.25.25 0 01-.28 0l-10.36-7V4.75zm0 2.662V18.75c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0L1.5 7.412z"></path></svg>
+                                        <span>
+                                            <strong>Email</strong>
+                                        </span>
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </nav>
+            <!--Body-->
+            <div class="col-10 pt-3 px-4">
+                <div class="col-12 body-content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

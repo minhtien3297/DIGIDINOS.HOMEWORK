@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!--adding Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!--adding jQuery, Popper.js, and Bootstrap JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--add css link-->
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+  <body>
+    <div class="card-body">
+      <!--Nen xanh duong dang sau-->
+      <nav class="navbar"></nav>
+      <!--Tab chua cac form-->
+      <div class="card card-info">
+        <!--Title tab-->
+        <div class="header-card">
+          <div class="card-title">XXXX</div>
+        </div>
+        <!--Forms-->
+        <div class="card-content bg-light">
+          <!--3 cot form tren cung-->
+          <div class="row">
+            <!--Cot tren cung thu nhat-->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label>XXXX</label>
+                  <input type="date" class="form-control" />
+                  ~
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <!--Cot tren cung thu hai-->
+            <div class="col-4">
+              <div class="row">
+                <!--form ben trai-->
+                <div class="col-4">
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <label>XXXX</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        style="width: 18%; border: 1px solid black"
+                      />
+                      <input
+                        type="button"
+                        class="btn btn-light form-control dropdown-toggle"
+                        value="▼"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        disabled
+                        style="width: 20%"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--form ben phai-->
+                <div class="col-8">
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <label>XXXX</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        style="width: 10%; border: 1px solid black"
+                      />
+                      <input
+                        type="button"
+                        class="btn btn-light form-control dropdown-toggle"
+                        value="▼"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        disabled
+                        style="width: 16%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Cot tren cung thu ba-->
+            <div class="col-4">
+              <!--Form tren thu 3-->
+              <div class="form-inline" id="cot3">
+                <div class="form-group">
+                  <label>XXXXXX</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--3 cot form thu hai-->
+          <div class="row mt-2">
+            <!--Cot dau tien dong hai -->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label>XXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 15%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 50%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Cot thu hai dong hai-->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group w-80">
+                  <label>XXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 18%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 64%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Cot thu ba dong hai-->
+            <div class="col-4">
+              <div class="form-inline" id="cot3">
+                <div class="form-group">
+                  <label>XXXXXX</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--3 cot form thu ba-->
+          <div class="row mt-2">
+            <!--Cot dau tien dong ba-->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label>XXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 15%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 50%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Cot thu hai dong ba-->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label>XXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 18%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 64%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Cot thu ba dong ba-->
+            <div class="col-4">
+              <div class="form-inline" id="cot3">
+                <div class="form-group">
+                  <label>XXXXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 15%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 30%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--2 cot form thu tu-->
+          <div class="row mt-2">
+            <!--Cot form dau tien dong thu tu-->
+            <div class="col-4">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label>XXXX</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 20%; border: 1px solid black"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-light form-control dropdown-toggle"
+                    value="▼"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    disabled
+                    style="width: 60%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Cot form thu hai dong thu tu-->
+            <div class="col-4">
+              <div class="row">
+                <!--Form ben trai-->
+                <div class="col-4">
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <label>XXXX</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        style="width: 75%"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--Form ben phai-->
+                <div class="col-8">
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <label>XX</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        style="width: 80%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Cot thu ba khong co noi dung-->
+            <div class="col-4"></div>
+          </div>
+        </div>
+      </div>
+      <!--Tab chua table-->
+      <div class="card ml-4" id="table">
+        <div class="card-content">
+          <!--Phan form phia tren table-->
+          <div class="form-inline mb-3">
+            <div class="form-group">
+              <label>XX</label>
+              <label class="ml-3">XXXX</label>
+              <input type="text" class="form-control" disabled />
+              <label class="ml-2">XXXXXXXX</label>
+              <input
+                type="button"
+                class="btn btn-light form-control dropdown-toggle"
+                value="▼"
+              />
+              <label class="ml-2">XXX</label>
+            </div>
+          </div>
+          <!--table-->
+          <table class="table mt-2">
+            <thead style="background-color: #c1e2fc">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+                <th scope="col">10</th>
+                <th scope="col">11</th>
+                <th scope="col">12</th>
+                <th scope="col">13</th>
+                <th scope="col">14</th>
+                <th scope="col">15</th>
+                <th scope="col">16</th>
+                <th scope="col">17</th>
+                <th scope="col">18</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="bg-light" scope="row">XXXX</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

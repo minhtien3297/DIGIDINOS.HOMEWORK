@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\bin\Debug\Bai22Recursion.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\bin\Debug\Bai22Recursion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\bin\Debug\Bai22Recursion.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\obj\Debug\Bai22Recursion.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\obj\Debug\Bai22Recursion.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\obj\Debug\Bai22Recursion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai22Recursion\Bai22Recursion\obj\Debug\Bai22Recursion.pdb

@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\bin\Debug\Bai14Sort.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\bin\Debug\Bai14Sort.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\bin\Debug\Bai14Sort.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\obj\Debug\Bai14Sort.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\obj\Debug\Bai14Sort.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\obj\Debug\Bai14Sort.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai14Sort\Bai14Sort\obj\Debug\Bai14Sort.pdb

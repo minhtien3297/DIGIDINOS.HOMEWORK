@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\bin\Debug\Bai15Function.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\bin\Debug\Bai15Function.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\bin\Debug\Bai15Function.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\obj\Debug\Bai15Function.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\obj\Debug\Bai15Function.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\obj\Debug\Bai15Function.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai15Function\Bai15Function\obj\Debug\Bai15Function.pdb

@@ -1,0 +1,207 @@
+html {
+  background-color: #343a40;
+}
+/*header styles*/
+.header_color {
+  background-color: #044863;
+}
+
+.header_height {
+  height: 70px;
+}
+
+.btn_search {
+  color: white;
+  fill: currentColor;
+}
+
+/*Menu styles*/
+.menu {
+  height: 100%;
+}
+
+.menu .nav-link {
+  border-bottom: 1px solid rgb(71, 71, 71);
+  height: 70px;
+}
+
+#red:hover {
+  background-color: red;
+}
+
+#red:focus {
+  background-color: red;
+}
+
+#orange:hover {
+  background-color: orange;
+}
+
+#orange:focus {
+  background-color: orange;
+}
+
+#green:hover {
+  background-color: greenyellow;
+}
+
+#green:focus {
+  background-color: greenyellow;
+}
+
+#blue:hover {
+  background-color: blue;
+}
+
+#blue:focus {
+  background-color: blue;
+}
+
+#purple:hover {
+  background-color: blueviolet;
+}
+
+#purple:focus {
+  background-color: blueviolet;
+}
+
+/*footer styles*/
+footer {
+  position: absolute;
+  margin-left: 16.65%;
+  width: 83.5%;
+  background-color: white;
+  height: 100px;
+}
+
+u {
+  font-size: 20px;
+}
+
+/*card deck styles*/
+.underline_red {
+  border-bottom: 2px solid red;
+}
+
+.card {
+  border: hidden;
+  font-size: 30px;
+}
+
+#last_text {
+  color: red;
+}
+
+.card-deck .card-img-top {
+  height: 200px;
+}
+
+#viewall_btn {
+  color: white;
+  fill: currentColor;
+}
+
+/*Right*/
+#Right div .container_text img {
+  border: 1px solid white;
+  width: 90%;
+}
+
+/*carousel styles*/
+.carousel-indicators li {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 5px solid white;
+}
+
+.carousel-indicators .active {
+  background-color: black;
+}
+
+.carousel-indicators {
+  right: -100%;
+  bottom: -70px;
+}
+
+/*img styles*/
+.bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 5px 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.container_text {
+  position: relative;
+  color: white;
+}
+
+#img_big {
+  position: absolute;
+  background-color: rgb(15, 179, 243);
+  top: 60px;
+  right: -8px;
+  color: #fff;
+  padding: 0px 10px;
+  font-weight: 700;
+  z-index: 1;
+  fill: currentColor;
+}
+
+#img_carousel {
+  position: absolute;
+  background-color: rgb(15, 179, 243);
+  top: 0px;
+  right: 6px;
+  color: #fff;
+  padding: 0px 10px;
+  font-weight: 700;
+  z-index: 1;
+  fill: currentColor;
+}
+
+#img_right {
+  top: 15px;
+  right: 8px;
+}
+
+.card-deck .item-viewed {
+  position: absolute;
+  background-color: rgb(15, 179, 243);
+  top: 170px;
+  right: -10px;
+  color: #fff;
+  padding: 0px 10px;
+  font-weight: 700;
+  z-index: 1;
+  fill: currentColor;
+}
+
+.item-viewed {
+  position: absolute;
+  background-color: rgb(15, 179, 243);
+  top: 0px;
+  right: 36px;
+  color: #fff;
+  padding: 0px 10px;
+  font-weight: 700;
+  z-index: 1;
+  fill: currentColor;
+}
+
+.item-viewed::after {
+  border-right: 10px solid transparent;
+  border-top: 7px solid rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  content: "";
+  position: absolute;
+}

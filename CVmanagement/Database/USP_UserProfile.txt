@@ -1,0 +1,79 @@
+USE [CVMANAGEMENT]
+GO
+/****** Object:  StoredProcedure [dbo].[Usp_UserProfile]    Script Date: 27-Jan-21 1:45:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[Usp_UserProfile] @id int = NULL
+, @name varchar(50) = NULL
+, @positionId int = NULL
+, @sourceId int = NULL
+, @applyDate datetime = NULL
+, @cvResult tinyint = NULL
+, @interviewDate datetime = NULL
+, @interviewResult tinyint = NULL
+, @status tinyint = NULL
+, @cvLink text = NULL
+, @note text = NULL
+, @Query int
+AS
+BEGIN
+  IF (@Query = 1)
+  BEGIN
+
+    INSERT INTO UserProfile (name
+    , positionId
+    , sourceId
+    , applyDate
+    , cvResult
+	, interviewDate
+	, interviewResult
+	, status
+    , cvLink
+    , note)
+      VALUES (@name, @positionId, @sourceId, @applyDate, @cvResult,@interviewDate, @interviewResult, @status, @cvLink, @note)
+    IF (@@ROWCOUNT > 0)
+    BEGIN
+      SELECT
+        'Insert'
+    END
+  END
+  IF (@Query = 2)
+  BEGIN
+    UPDATE UserProfile
+    SET name = @name,
+        positionId = @positionId,
+        sourceId = @sourceId,
+        applyDate = @applyDate,
+        cvResult = @cvResult,
+        interviewDate = @interviewDate,
+        interviewResult = @interviewResult,
+        status = @status,
+        cvLink = @cvLink,
+        note = @note
+    WHERE UserProfile.id = @id
+    SELECT
+      'Update'
+  END
+  IF (@Query = 3)
+  BEGIN
+    SELECT
+      *
+    FROM UserProfile
+  END
+END
+  IF (@Query = 4)
+  BEGIN
+    SELECT
+      *
+    FROM UserProfile
+    WHERE UserProfile.id = @id
+  END
+  IF (@Query = 5)
+  BEGIN
+    SELECT
+      *
+    FROM UserProfile
+    WHERE UserProfile.name = @name
+  END

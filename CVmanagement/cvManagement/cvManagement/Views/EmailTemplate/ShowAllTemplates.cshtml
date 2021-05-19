@@ -1,0 +1,72 @@
+﻿@model cvManagement.Models.EmailTemplate
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-xxl d-flex justify-content-between" style="margin-bottom:10px;">
+    <h4>Email Templates</h4>
+    @Html.ActionLink("Create", "CreateTemplate", "", new { @class = "w-10 btn btn-primary btn-lg" })
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                No.
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <!--So dong-->
+    @{ int rowNo = 0; }
+    <!--Noi dung-->
+    @foreach (var item in Model.listTemplate)
+    {
+        <tr>
+            <td>
+                @(rowNo += 1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                <div class="row">
+                    <div class="col-6">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "w-10 btn btn-danger btn-lg", onclick = "return confirm('Are you sure to delete this template?');" })
+                    </div>
+                    <div class="col-6">
+                        @Html.ActionLink("Edit", "EditTemplate", new { id = item.Id }, new { @class = "w-10 btn btn-warning btn-lg", @style = "color: white" })
+                    </div>
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<!--Script thong bao-->
+@if (TempData["InsertResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Inserted Successfully");
+    </script>
+
+}
+@if (TempData["UpdateResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Updated Successfully");
+    </script>
+
+}
+@if (TempData["DeleteResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Deleted Successfully");
+    </script>
+}

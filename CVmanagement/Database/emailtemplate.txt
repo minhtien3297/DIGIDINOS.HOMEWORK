@@ -1,0 +1,48 @@
+USE CVMANAGEMENT
+GO
+/****** Object:  StoredProcedure [dbo].[Usp_InsertUpdateDelete_Blog]    Script Date: 1/26/2021 10:21:31 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROCEDURE [dbo].[Usp_EmailTemplate]
+@id INT = NULL,
+@name VARCHAR(50) = NULL,
+@content TEXT = NULL,
+@Query int
+AS
+BEGIN
+	IF(@Query=1)
+		BEGIN
+			INSERT INTO EmailTemplate(name,content)
+			VALUES(@name,@content)
+			IF(@@ROWCOUNT > 0)
+				BEGIN
+					SELECT 'Insert'
+				END
+		END
+	IF(@Query=2)
+		BEGIN
+			UPDATE EmailTemplate SET name = @name,content = @content WHERE EmailTemplate.id = @id
+			SELECT 'Update'
+		END
+	IF(@Query=3)
+		BEGIN
+			DELETE FROM EmailTemplate WHERE EmailTemplate.id = @id
+			SELECT 'Deleted'
+		END
+	IF(@Query=4)
+		BEGIN
+			SELECT * FROM EmailTemplate
+		END
+	IF(@Query=5)
+		BEGIN
+			SELECT * FROM EmailTemplate
+			WHERE EmailTemplate.id = @id
+		END
+	IF(@Query = 6)
+	BEGIN
+		SELECT * FROM EmailTemplate 
+		WHERE EmailTemplate.name LIKE '%' + @name + '%';
+	END
+END

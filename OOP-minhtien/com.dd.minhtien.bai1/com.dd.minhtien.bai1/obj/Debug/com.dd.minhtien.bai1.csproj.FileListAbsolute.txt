@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\bin\Debug\com.dd.minhtien.bai1.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\bin\Debug\com.dd.minhtien.bai1.exe
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\bin\Debug\com.dd.minhtien.bai1.pdb
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\obj\Debug\com.dd.minhtien.bai1.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\obj\Debug\com.dd.minhtien.bai1.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\obj\Debug\com.dd.minhtien.bai1.exe
+C:\Users\tien_\Downloads\Digi Dinos\OOP-minhtien\com.dd.minhtien.bai1\com.dd.minhtien.bai1\obj\Debug\com.dd.minhtien.bai1.pdb

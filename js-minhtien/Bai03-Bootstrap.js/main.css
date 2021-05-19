@@ -1,0 +1,59 @@
+body {
+    background-color: #f4f7fc;
+}
+
+/*navbar style*/
+.navbar {
+    height: 150px;
+    background-color: #153d77;
+}
+
+/*Card styles*/
+.card {
+    position: absolute;
+    height: 300px;
+    width: 98%;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.card-info {
+    position: absolute;
+    height: 270px;
+    width: 98%;
+    top: 0;
+    left: 0;
+    transform: translate(1%, 4%);
+    padding: 8px 16px;
+}
+
+.card-content{
+    height: 200px;
+    padding: 14px;
+}
+
+/*label styles*/
+label {
+    margin-right: 10px;
+}
+
+/*button styles*/
+.btn{
+    border: 1px solid black;
+}
+
+/*cot form thu 3 styles*/
+#cot3 {
+    margin-left: 70px;
+}
+
+/*table styles*/
+#table{
+    margin-top: 150px;
+    height: 100%;
+}
+
+
+

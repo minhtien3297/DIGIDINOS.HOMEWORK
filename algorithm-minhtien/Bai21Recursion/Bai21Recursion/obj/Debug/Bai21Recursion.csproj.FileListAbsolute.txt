@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\bin\Debug\Bai21Recursion.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\bin\Debug\Bai21Recursion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\bin\Debug\Bai21Recursion.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\obj\Debug\Bai21Recursion.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\obj\Debug\Bai21Recursion.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\obj\Debug\Bai21Recursion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai21Recursion\Bai21Recursion\obj\Debug\Bai21Recursion.pdb

@@ -1,0 +1,14 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\obj\Debug\Bai5Array.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\obj\Debug\Bai5Array.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\bin\Debug\Bai5Array.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\bin\Debug\Bai5Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\bin\Debug\Bai5Array.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\obj\Debug\Bai5Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\Bai5Array\obj\Debug\Bai5Array.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\bin\Debug\Bai5Array.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\bin\Debug\Bai5Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\bin\Debug\Bai5Array.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\obj\Debug\Bai5Array.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\obj\Debug\Bai5Array.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\obj\Debug\Bai5Array.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai5Array\Bai5Array\obj\Debug\Bai5Array.pdb

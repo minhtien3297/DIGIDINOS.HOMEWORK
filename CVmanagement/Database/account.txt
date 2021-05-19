@@ -1,0 +1,50 @@
+USE CVMANAGEMENT
+GO
+/****** Object:  StoredProcedure [dbo].[Usp_InsertUpdateDelete_Blog]    Script Date: 1/26/2021 10:21:31 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[Usp_Account]
+@id INT = NULL,
+@name VARCHAR(50) = NULL,
+@password VARCHAR(50) = NULL,
+@role tinyint = NULL,
+@Query int
+AS
+BEGIN
+	IF(@Query=1)
+		BEGIN
+			INSERT INTO Account(name,password,role)
+			VALUES(@name,@password,@role)
+			IF(@@ROWCOUNT > 0)
+				BEGIN
+					SELECT 'Insert'
+				END
+		END
+	IF(@Query=2)
+		BEGIN
+			UPDATE Account SET name = @name,password = @password,role = @role WHERE Account.id = @id
+			SELECT 'Update'
+		END
+	IF(@Query=3)
+		BEGIN
+			DELETE FROM Account WHERE Account.id = @id
+			SELECT 'Deleted'
+		END
+	IF(@Query=4)
+		BEGIN
+			SELECT * FROM Account
+		END
+	IF(@Query=5)
+		BEGIN
+			SELECT * FROM Account
+			WHERE Account.id = @id
+		END
+	IF(@Query = 6)
+	BEGIN
+		SELECT * FROM Account
+		WHERE Account.password = @password and Account.id = @id
+	END
+END
+

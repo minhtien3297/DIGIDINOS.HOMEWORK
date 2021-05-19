@@ -1,0 +1,149 @@
+﻿@model cvManagement.Models.UserProfile
+@{ViewBag.Title = "ListUserProfile";}
+@functions{
+    public static readonly List<SelectListItem> LISTRESULT = new List<SelectListItem>{
+        new SelectListItem{ Text="NULL/btn btn-outline-light disabled", Value = "0", },
+        new SelectListItem{ Text="Pass/btn btn-success disabled", Value = "1", },
+        new SelectListItem{ Text="Fail/btn btn-danger disabled", Value = "2" },
+        new SelectListItem { Text = "Backup/btn btn-info disabled", Value = "3" },
+    };
+    public static readonly List<SelectListItem> LISTSTATUS = new List<SelectListItem>{
+        new SelectListItem{ Text="CV applied", Value = "0", },
+        new SelectListItem{ Text="Thank email sent", Value = "1", },
+        new SelectListItem{ Text="Offer email sent", Value = "2" },
+    };
+    public static string SelectNameById(int id, List<SelectListItem> listItem)
+    {
+        foreach (var item in listItem)
+        {
+            if (Convert.ToInt32(item.Value) == id)
+            {
+                return item.Text;
+            }
+        }
+        return null;
+    }
+}
+<style>
+    input[type=button] {
+        width: 80px;
+        height: 40px;
+    }
+</style>
+<div class="container-xxl d-flex justify-content-between" style="margin-bottom:10px;">
+    <h4>List profiles</h4>
+    @Html.ActionLink("Create", "InsertUserProfile", null, new { @class = "w-10 btn btn-primary btn-lg" })
+</div>
+<table class="table" id="datatable">
+    <thead>
+        <tr style="height:50px">
+            <th>
+                No.
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Source
+            </th>
+            <th>
+                Apply date
+            </th>
+            <th>
+                CV result
+            </th>
+            <th>
+                Interview date
+            </th>
+            <th>
+                Interview result
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                CV link
+            </th>
+            <th>
+                Note
+            </th>
+            <th>
+                Edit
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ int rowNo = 0; }
+        @foreach (var item in Model.ListProfile)
+        {
+            <tr>
+                <td>
+                    @(rowNo += 1)
+                </td>
+                <td>
+                    @Html.TextBoxFor(modelItem => item.Name, null, new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.DropDownListFor(modelItem => item.PositionId, new SelectList(Model.listPosition, "Id", "Name", item.PositionId), new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.DropDownListFor(modelItem => item.SourceId, new SelectList(Model.listSource, "Id", "Name", item.SourceId), new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBoxFor(modelItem => item.ApplyDate, "{0:MM/dd/yyyy}", new { @class = "form-control" })
+                </td>
+                <td>
+                    <input type="button" value="@SelectNameById(item.CvResult,LISTRESULT).Split('/')[0]" class="@SelectNameById(item.CvResult,LISTRESULT).Split('/')[1]" />
+                </td>
+                <td>
+                    @{
+                        switch (@Html.DisplayFor(modelItem => item.InterviewDate, "{0:MM/dd/yyyy}").ToString())
+                        {
+                            case "0001/01/01":
+                                break;
+                            default:
+                                @Html.TextBoxFor(modelItem => item.InterviewDate, "{0:MM/dd/yyyy}", new { @class = "form-control" })
+                                break;
+                        }
+                    }
+                </td>
+                <td>
+                    <input type="button" value="@SelectNameById(item.InterviewResult,LISTRESULT).Split('/')[0]" class="@SelectNameById(item.InterviewResult,LISTRESULT).Split('/')[1]" />
+                </td>
+                <td>
+                    <input type="text" value="@SelectNameById(item.CvResult,LISTSTATUS)" class="form-control" />
+                </td>
+                <td>
+                    @Html.TextBoxFor(modelItem => item.CvLink, new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBoxFor(modelItem => item.Note, new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateUserProfile", new { id = item.Id }, new { @class = "w-10 btn btn-warning btn-lg" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (TempData["InsertResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Inserted Successfully");
+    </script>
+}
+@if (TempData["UpdateResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Updated Successfully");
+    </script>
+}
+@if (TempData["DeleteResult"] != null)
+{
+    <script type="text/javascript">
+        alert("Record Is Deleted Successfully");
+    </script>
+}

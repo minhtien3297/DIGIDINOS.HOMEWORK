@@ -1,0 +1,68 @@
+use CVMANAGEMENT
+GO
+
+CREATE TABLE Position(
+	id int not null IDENTITY(1,1) primary key,
+	name varchar(50)
+)
+CREATE TABLE Source(
+	id int not null IDENTITY(1,1) PRIMARY KEY,
+	name varchar(50)
+)
+CREATE TABLE EmailTemplate(
+	id int not null IDENTITY(1,1) PRIMARY KEY,
+	name varchar(50),
+	content text
+)
+create TABLE Account(
+	id int not null IDENTITY(1,1) PRIMARY KEY,
+	name varchar(50),
+	password varchar(50),
+	role tinyint
+)
+create table UserProfile(
+	id int not null IDENTITY(1,1) PRIMARY KEY,
+	name varchar(50),
+	positionId int not null,
+	sourceId int not null,
+	applyDate date,
+	cvResult tinyint,
+	interviewDate date,
+	interviewResult tinyInt,
+	status tinyint,
+	cvLink text,
+	note text,
+	CONSTRAINT FK_PostionUserProfile FOREIGN KEY(positionId)
+	REFERENCES Position(id),
+	CONSTRAINT FK_SourceUserProfile FOREIGN KEY(sourceId)
+	REFERENCES Source(id)
+)
+
+
+insert into Account values('humanresource','humanresource',0);
+insert into Account values('interviewer','interviewer',1);
+
+insert into Source values('topcv');
+insert into Source values('vncareer');
+
+insert into Position values('Fresher C#');
+insert into Position values('C#');
+insert into Position values('Fresher PHP');
+insert into Position values('PHP');
+insert into Position values('tester');
+
+
+
+insert into EmailTemplate values('thucamon','Chao ban, cam on ban da tham gia buoi phong van, ban phong van fail roi');
+insert into EmailTemplate values('thunhanviec','Chao ban, cam on ban da tham gia buoi phong van, ban thanh cong roi');
+insert into EmailTemplate values('thumoiphongvan','Chao ban, cam on ban da quan tam toi cong ty, ban se tham gia phong van vao ngay ,dong y thi rep 0K?, doi lich thi rep date');
+
+insert into UserProfile values('NgoTheKieu',1,1,'2020/12/31',1,'2021/1/1',1,1,'facebook.com','ban nay ok vl roi');
+
+insert into UserProfile values('DaoMinhTien',2,2,'2020/12/31',2,'2021/1/1',2,2,'facebook.com','ban nay chan vl roi');
+
+select * from Account
+select * from EmailTemplate
+select * from Position
+select * from Source
+select * from UserProfile

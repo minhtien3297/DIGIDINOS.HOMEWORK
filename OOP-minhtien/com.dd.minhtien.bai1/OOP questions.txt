@@ -1,0 +1,20 @@
+Cháu gửi chú phần trả lời câu hỏi của bài OOP:
+
+1. Tác dụng của việc tạo class Abstract BaseRow:
+- Giúp gom các attributes và constructor lại trong cùng một class để dễ quản lý và rút gọn code.
+
+2. Tác dụng của việc tạo class Abstract BaseDao:
+- Giúp gom tất cả các function giống nhau ở các class khác lại.
+- Rút gọn số lượng code phải viết.
+- Dễ quản lý code hơn.
+
+3. Lợi điểm của private, public, protected:
+- Giúp rút gọn code với các lớp con do đã nhận thuộc tính lớp cha.
+- Bảo vệ các table trong database để chỉ lớp đó và các lớp con mới thay đổi được dữ liệu.
+
+4. Tác dụng của singleton pattern:
+- Giúp database chỉ khởi tạo một đối tượng duy nhất.
+- Giúp đối tượgn của database có thể được truy cập từ mọi chỗ.
+
+5. Tác dụng của interface:
+- Giúp tạo sẵn những function cần sử dụng chung cho các class Dao.

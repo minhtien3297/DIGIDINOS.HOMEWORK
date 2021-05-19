@@ -1,0 +1,110 @@
+﻿@model BlogManager.Models.Blog
+
+@{
+    ViewBag.Title = "NewsEditBlog";
+}
+
+@if (Model.BlogID > 0)
+{
+    <h2>EditBlog</h2>
+}
+else
+{
+    <h2>NewsBlog</h2>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="col-md-2">Tiêu đề</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Mô tả ngắn</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Chi tiết</label>
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Detail)
+                @Html.ValidationMessageFor(model => model.Detail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2">Hình ảnh</label>
+            <br />
+            @Html.TextBoxFor(model => model.Photo, new { type = "file" })
+            @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Loại</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Type, new List<SelectListItem>
+                {
+                   new SelectListItem{ Text="Giải Trí", Value = "Giải Trí" },
+                   new SelectListItem{ Text="Thời Sự", Value = "Thời Sự" },
+                   new SelectListItem{ Text="Thế Giới", Value = "Thế Giới" },
+                   new SelectListItem{ Text="Kinh Doanh", Value = "Kinh Doanh" },
+                })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Vị Trí</label>
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.Address, "Việt Nam")
+                <label>Việt Nam</label>
+                <br />
+                @Html.RadioButtonFor(model => model.Address, "Châu Á")
+                <label>Châu Á</label>
+                <br />
+                @Html.RadioButtonFor(model => model.Address, "Châu Âu")
+                <label>Châu Âu</label>
+                <br />
+                @Html.RadioButtonFor(model => model.Address, "Châu Mỹ")
+                <label>Châu Mỹ</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2">Public</label>
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.Condition, "True")
+                <label>Yes</label>
+                <br />
+                @Html.RadioButtonFor(model => model.Condition, "False")
+                <label>No</label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-2">Date Public</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-center">
+            <input type="submit" value="Submit" class="btn btn-success mr-1" />
+            <input type="reset" value="Clear" class="btn btn-primary" />
+        </div>
+    </div>
+}
+

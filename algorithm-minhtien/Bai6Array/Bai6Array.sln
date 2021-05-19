@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai6Array", "Bai6Array\Bai6Array.csproj", "{B5973AAD-9C3F-4893-8EFC-DBB8884F47DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5973AAD-9C3F-4893-8EFC-DBB8884F47DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5973AAD-9C3F-4893-8EFC-DBB8884F47DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5973AAD-9C3F-4893-8EFC-DBB8884F47DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5973AAD-9C3F-4893-8EFC-DBB8884F47DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7A240C8-F17C-41CC-9353-3CB8CE744D9C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\bin\Debug\Bai16Funtion.exe.config
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\bin\Debug\Bai16Funtion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\bin\Debug\Bai16Funtion.pdb
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\obj\Debug\Bai16Funtion.csprojAssemblyReference.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\obj\Debug\Bai16Funtion.csproj.CoreCompileInputs.cache
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\obj\Debug\Bai16Funtion.exe
+C:\Users\tien_\Downloads\Digi Dinos\algorithm-minhtien\Bai16Funtion\Bai16Funtion\obj\Debug\Bai16Funtion.pdb

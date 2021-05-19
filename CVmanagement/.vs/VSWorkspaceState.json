@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cvManagement",
+    "\\cvManagement\\cvManagement",
+    "\\cvManagement\\cvManagement\\Controllers",
+    "\\cvManagement\\cvManagement\\DataAccessLayer",
+    "\\cvManagement\\cvManagement\\Models",
+    "\\cvManagement\\cvManagement\\Views",
+    "\\cvManagement\\cvManagement\\Views\\Home"
+  ],
+  "SelectedNode": "\\cvManagement\\cvManagement\\Views\\Home\\Login.cshtml",
+  "PreviewInSolutionExplorer": false
+}

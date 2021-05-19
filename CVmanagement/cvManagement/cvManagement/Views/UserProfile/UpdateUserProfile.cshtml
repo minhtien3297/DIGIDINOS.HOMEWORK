@@ -1,0 +1,86 @@
+﻿@model cvManagement.Models.UserProfile
+
+@{
+    ViewBag.Title = "InsertUserProfile";
+}
+@functions{
+    public static readonly List<SelectListItem> LISTRESULT = new List<SelectListItem>{
+        new SelectListItem{ Text="NULL", Value = "0", },
+        new SelectListItem{ Text="Pass", Value = "1", },
+        new SelectListItem{ Text="Fail", Value = "2" },
+        new SelectListItem { Text = "Backup", Value = "3" },
+    };
+    public static readonly List<SelectListItem> LISTSTATUS = new List<SelectListItem>{
+        new SelectListItem{ Text="CV applied", Value = "0", },
+        new SelectListItem{ Text="Thank email sent", Value = "1", },
+        new SelectListItem{ Text="Offer email sent", Value = "2" },
+    };
+}
+<style>
+    .container {
+        max-width: 960px;
+    }
+
+    .lh-condensed {
+        line-height: 1.25;
+    }
+</style>
+<script>
+    (function () {
+        'use strict'
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation')
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    })()
+</script>
+<div class="col-12 d-flex justify-content-between" style="padding:0px">
+    <h2>Update profile</h2>
+    @Html.ActionLink("Back To List", "ListUserProfile", null, new { @class = "btn btn-secondary w-10 btn btn-primary btn-lg" })
+</div>
+<hr class="my-4">
+@using (Html.BeginForm("UpdateUserProfile", "UserProfile", null, FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+{
+    <div class="row g-3">
+        <div class="col-md-4">
+            @Html.HiddenFor(model => model.Id)
+            <label for="country" class="form-label">CV result</label>
+            @Html.DropDownListFor(model => model.CvResult, LISTRESULT, new { @class = "form-control" })
+        </div>
+
+        <div class="col-md-4">
+            <label for="state" class="form-label">Interview date</label>
+            @Html.TextBoxFor(model => model.InterviewDate, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+            <div class="invalid-feedback">
+                Please enter the date.
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="zip" class="form-label">Interview result</label>
+            @Html.DropDownListFor(model => model.InterviewResult, LISTRESULT, new { @class = "form-control" })
+        </div>
+        <div class="col-12">
+            <label for="address" class="form-label">Email status</label>
+            @Html.DropDownListFor(model => model.Status, LISTSTATUS, new { @class = "form-control" })
+        </div>
+    </div>
+    <label for="address" class="form-label">Note</label>
+    @Html.TextAreaFor(model => model.Note, new { @class = "form-control", @cols = 3, @rows = 6, required = "required" })
+    <div class="invalid-feedback">
+        Please enter the note.
+    </div>
+    <!--Buttons-->
+    <hr class="my-4">
+    <div class="col-12" style="padding:0px">
+        <input type="submit" value="Submit" class="w-10 btn btn-primary btn-lg" />
+    </div>
+}

@@ -1,0 +1,68 @@
+﻿@model BlogManager.Models.Blog
+
+@{
+    ViewBag.Title = "ListBlogs";
+}
+
+<h4>List Blogs</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Tin
+            </th>
+            <th>
+                Loại
+            </th>
+            <th>
+                Trạng thái
+            </th>
+            <th>
+                Vị trí
+            </th>
+            <th>
+                Ngày public
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ShowAllBlog)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BlogID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Condition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "NewsEditBlog", new { id = item.BlogID })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BlogID }, new { @class = "btn btn-outline-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
